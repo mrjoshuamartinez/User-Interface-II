@@ -1,1 +1,8 @@
 /* Add CSS styling here */
+body {
+    background-color: black;
+}
+
+.container {
+    border: 1px solid red;
+}
