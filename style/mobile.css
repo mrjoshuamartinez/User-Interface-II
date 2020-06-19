@@ -1,0 +1,447 @@
+/* CSS Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* display size 360×640 */
+
+@media screen and (max-width: 700px) {
+
+    body {
+        background-color: black;
+        color: grey;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+    }
+
+    header .title-container {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-family: 'Playfair Display', serif;
+        font-size: 60px;
+        color: dodgerblue;
+    }
+    
+    header .nav-container nav a:link, 
+    header .nav-container nav a:visited {
+        margin: 5px;
+        padding-top: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 10px;
+        border: 1px solid #4d4d4d;
+        border-radius: 10px;
+        background-color: #AAAAAA;
+        font-family: 'Playfair Display', serif;
+        font-size: 12px;
+        color: #000000;
+        font-weight: bolder;
+        text-decoration: none;
+    }
+    
+    header .nav-container nav a:hover, 
+    header .nav-container nav a:active {
+        margin: 5px;
+        padding-top: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 10px;
+        border: 1px solid #4d4d4d;
+        border-radius: 10px;
+        background-color: dodgerblue;
+        font-family: 'Playfair Display', serif;
+        font-size: 12px;
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    header .content-container .content {
+        width: auto;
+    }
+
+    header .content-container .content span {
+        font-size: 22px;
+        color: dodgerblue;
+        font-weight: bold;
+    }
+
+    .main-project img {
+        height: 200px;
+        width: 400px;
+    }
+
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 25px;
+    }
+
+    .projects-container .projects {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+
+    .projects-container .projects-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        font-weight: bold;
+        color: dodgerblue;
+    }
+
+    footer a:link, footer a:visited {
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    border: 1px solid #4d4d4d;
+    border-radius: 10px;
+    background-color: #AAAAAA;
+    font-family: 'Playfair Display', serif;
+    font-size: 12px;
+    color: #000000;
+    font-weight: bolder;
+    text-decoration: none;
+    }
+
+    footer a:hover, footer a:active {
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    border: 1px solid #4d4d4d;
+    border-radius: 10px;
+    background-color: dodgerblue;
+    font-family: 'Playfair Display', serif;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    }
+}
+
+/* CSS styling here */
+body {
+    background-color: black;
+    color: grey;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+/*
+body {
+    background-color: black;
+    color: grey;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+*/
+.container {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+header .title-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 100px;
+    color: dodgerblue;
+}
+
+header .nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+header .nav-container nav a:link, 
+header .nav-container nav a:visited {
+    margin: 10px;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    border: 1px solid #4d4d4d;
+    border-radius: 10px;
+    background-color: #AAAAAA;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #000000;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+header .nav-container nav a:hover, 
+header .nav-container nav a:active {
+    margin: 10px;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    border: 1px solid #4d4d4d;
+    border-radius: 10px;
+    background-color: dodgerblue;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header .content-container {
+    background-color: #4d4d4d;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: 'Libre Baskerville', serif;
+    color: #ffffff;
+}
+
+header .content-container .content {
+    width: 500px;
+}
+
+header .content-container {
+    background-color: #4d4d4d;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    font-family: 'Libre Baskerville', serif;
+    color: #ffffff;
+}
+
+header .content-container .content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    padding-top: 10px;
+}
+
+header .content-container .content span {
+    font-size: 30px;
+    margin-right: 3px;
+    color: dodgerblue;
+}
+
+.main-project {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-project img {
+    height: 400px;
+    width: 1000px;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.box-container .boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box-container .boxes img {
+    width: 200px;
+    height: 200px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.about-container .about-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 400px;
+}
+
+.about-container .about-left img {
+    width: 200px;
+    height: 200px;
+}
+
+.about-container .about-right {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-container .about-right .left {
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 150px;
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+}
+
+.projects-container .projects {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.projects-container .projects img {
+    width: 250px;
+    height: 575px;
+}
+
+/*
+
+.projects-container .projects {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.projects-container .projects img {
+    width: 100px;
+    height: 200px;
+}
+
+*/
+
+.projects-container .projects-text {
+    background-color: #4d4d4d;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: dodgerblue;
+}
+
+.project {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    background-color: #4d4d4d;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+footer a:link, 
+footer a:visited {
+    margin: 10px;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    border: 1px solid #4d4d4d;
+    border-radius: 10px;
+    background-color: #AAAAAA;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #000000;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover, 
+footer a:active {
+    margin: 10px;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    border: 1px solid #4d4d4d;
+    border-radius: 10px;
+    background-color: dodgerblue;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}

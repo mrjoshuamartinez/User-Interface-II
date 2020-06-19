@@ -51,18 +51,15 @@ body {
     color: grey;
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .container {
-    margin-left: 25px;
-    margin-right: 25px;
+    width: 100%;
 }
 
-/*header {
-    
-}*/
-
-header .title-container {
+.title-container {
     display: flex;
     justify-content: center;
     padding-top: 20px;
@@ -79,8 +76,8 @@ header .nav-container {
     height: 50px;
 }
 
-header .nav-container nav a:link, 
-header .nav-container nav a:visited {
+.nav-container nav a:link, 
+.nav-container nav a:visited {
     margin: 10px;
     padding-top: 10px;
     padding-left: 40px;
@@ -96,8 +93,8 @@ header .nav-container nav a:visited {
     text-decoration: none;
 }
 
-header .nav-container nav a:hover, 
-header .nav-container nav a:active {
+.nav-container nav a:hover, 
+.nav-container nav a:active {
     margin: 10px;
     padding-top: 10px;
     padding-left: 40px;
@@ -113,45 +110,26 @@ header .nav-container nav a:active {
     text-decoration: none;
 }
 
-header .content-container {
+.content-container {
     background-color: #4d4d4d;
     margin-top: 25px;
     margin-bottom: 25px;
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 100px;
+    padding-right: 100px;
     font-family: 'Libre Baskerville', serif;
     color: #ffffff;
 }
 
-header .content-container .content-top {
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-    padding-top: 10px;
-}
-
-header .content-container .content-top span {
+.content-container .content span {
     font-size: 30px;
     margin-right: 3px;
     color: dodgerblue;
 }
 
-header .content-container .content-bottom {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-header .content-container .content-bottom span {
-    color: dodgerblue;
-    font-size: 20px;
-}
-
 .main-project {
     margin-bottom: 25px;
-    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,7 +137,89 @@ header .content-container .content-bottom span {
 
 .main-project img {
     height: 400px;
-    width: 1000px;
+    width: 100%;
+}
+
+.projects-container {
+    display: flex;
+}
+
+.projects-container .projects {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    padding-right: 25px;
+    
+}
+
+.projects img {
+    width: 200px;
+    height: 450px;
+}
+
+.projects-container .projects-text {
+    background-color: #4d4d4d;
+    width: 250px;
+    padding-left: 25px;
+    padding-right:25px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
+    color: dodgerblue;
+}
+
+.project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container {
+    background-color: #4d4d4d;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+footer a:link, 
+footer a:visited {
+    margin: 10px;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    border: 1px solid #4d4d4d;
+    border-radius: 10px;
+    background-color: #AAAAAA;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #000000;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover, 
+footer a:active {
+    margin: 10px;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    border: 1px solid #4d4d4d;
+    border-radius: 10px;
+    background-color: dodgerblue;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 .box-container {
@@ -220,82 +280,173 @@ header .content-container .content-bottom span {
     width: 150px;
     color: dodgerblue;
     font-weight: bold;
+}/* display 1024 */
+
+@media (max-width: 1024px) {
+
+    .projects-container .projects-text {
+        font-size: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 
-.projects-container {
-    display: flex;
-    flex-direction: row;
-    height: 600px;
+/* display 780*/
+
+@media (max-width: 800px) {
+    .title-container {
+        font-size: 80px;
+        font-weight: bold;
+    }
+
+    .main-project img {
+        height: 350px;
+        width: 100%;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .projects-container .projects {
+        justify-content: space-between;
+        padding: 0px;
+    }
+
+    .projects-container .projects-text {
+        width: auto;
+        height: 100px;
+        margin-bottom: 30px;
+    }
+
+    .projects-container .projects img {
+        width: 160px;
+        height: 375px;
+    }
+
+    .project {
+        width: auto;
+    }
+
 }
 
-.projects-container .projects-left {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 25px;
+/* display 360*/
+
+@media (max-width: 415px) {
+    
+    body {
+        font-size: 14px;
+    }
+
+    .title-container {
+        font-size: 40px;
+    }
+    
+    .nav-container nav a:link, 
+    .nav-container nav a:visited {
+        margin: 5px;
+        padding-top: 5px;  
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+        font-size: 12px;
+    }
+    
+    .nav-container nav a:hover, 
+    .nav-container nav a:active {
+        margin: 5px;
+        padding-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+        font-size: 12px;
+    }
+
+    .content-container {
+        padding: 25px;
+    }
+    
+    .content-container .content {
+        width: auto;
+    }
+
+    .content-container .content span {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .main-project img {
+        height: 200px;
+    }
+
+    .projects-container {
+        flex-direction: column;
+    }
+
+    .projects-container .projects {
+        justify-content: space-between;
+    }
+
+    .projects .project img {
+        width: 75px;
+        height: 200px;
+    }
+
+    .projects-container .projects-text {
+        width: auto;
+        padding: 0px;
+        height: 50px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .footer-container {
+        height: 80px;
+    }
+
+    footer a:link, 
+    footer a:visited {
+        padding-top: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-size: 12px;
+    }
+
+    footer a:hover, 
+    footer a:active {
+        padding-top: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        font-size: 12px;
+    }
 }
 
-.projects-container .projects-left img {
-    width: 250px;
-    height: 575px;
-}
+/* display 320 */
+@media (max-width: 350px) {
+    .title-container {
+        font-size: 35px;
+    }
 
-.projects-container .projects-right {
-    background-color: #4d4d4d;
-    width: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    color: dodgerblue;
-}
+    .nav-container nav a:link, 
+    .nav-container nav a:visited {  
+        padding-left: 7px;
+        padding-right: 7px;
+    }
 
-.project {
-    width: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .nav-container nav a:hover, 
+    .nav-container nav a:active {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+    .projects .project img {
+        width: 60px;
+        height: 150px;
+    }
 
-.footer-container {
-    background-color: #4d4d4d;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer a:link, 
-footer a:visited {
-    margin: 10px;
-    padding-top: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 10px;
-    border: 1px solid #4d4d4d;
-    border-radius: 10px;
-    background-color: #AAAAAA;
-    font-family: 'Playfair Display', serif;
-    font-size: 15px;
-    color: #000000;
-    font-weight: bolder;
-    text-decoration: none;
-}
-
-footer a:hover, 
-footer a:active {
-    margin: 10px;
-    padding-top: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 10px;
-    border: 1px solid #4d4d4d;
-    border-radius: 10px;
-    background-color: dodgerblue;
-    font-family: 'Playfair Display', serif;
-    font-size: 15px;
-    color: #ffffff;
-    font-weight: bold;
-    text-decoration: none;
+    .projects-container .projects-text {
+        font-size: 16px;
+    }
 }
